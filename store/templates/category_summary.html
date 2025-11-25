@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Categories</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Choose Your Category Below...</p>
+        </div>
+    </div>
+</header>
+
+<div class="container px-4 px-lg-5 mt-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <center>
+            <div class="col-lg-8">
+                <br/><br/><br/><br/><br/><br/>
+                {% for category in categories %}
+                    <h2><a href="{% url 'category' category.name %}">{{ category.name }}</a></h2>
+                {% endfor %}
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                
+
+            </div>
+        </center>
+    </div>
+</div>
+
+{% endblock %}
