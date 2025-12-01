@@ -91,7 +91,7 @@ DATABASES = {
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': os.environ['DB_PASSWORD_PP'],
-        'HOST': 'maglev.proxy.rlwy.net',
+        'HOST': 'postgres.railway.internal',
         'PORT': '13909',
     }
 }
