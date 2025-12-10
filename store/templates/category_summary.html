@@ -16,7 +16,7 @@
             <div class="col-lg-8">
                 <br/><br/><br/><br/><br/><br/>
                 {% for category in categories %}
-                    <h2><a href="{% url 'category' category.name %}">{{ category.name }}</a></h2>
+                    <h2><a href="{% url 'category' category.name|slugify %}">{{ category.name }}</a></h2>
                 {% endfor %}
                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 
