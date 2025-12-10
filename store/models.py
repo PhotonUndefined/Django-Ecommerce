@@ -1,3 +1,4 @@
+from cloudinary_storage.storage import MediaCloudinaryStorage
 from django.db import models
 import datetime
 from django.contrib.auth.models import User
@@ -62,7 +63,7 @@ class Product(models.Model):
     price = models.DecimalField(default=0.00, max_digits=6, decimal_places=2)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
     stock_quantity = models.PositiveIntegerField(default=0)
-    image = models.ImageField(upload_to='uploads/product/', blank=True, null=True)
+    image = models.ImageField(upload_to='uploads/product/', blank=True, null=True, storage=MediaCloudinaryStorage())
     is_on_sale = models.BooleanField(default=False)
     sale_price = models.DecimalField(default=0.00, max_digits=6, decimal_places=2)
     #id = models.AutoField(primary_key=True) -- is created automatically by Django
