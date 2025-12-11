@@ -40,8 +40,8 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
 }
 
-ALLOWED_HOSTS = ['django-ecommerce-production-9915.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['https://django-ecommerce-production-9915.up.railway.app']
+ALLOWED_HOSTS = ['https://photonundefined.com', 'photonundefined.com', 'django-ecommerce-production-9915.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://photonundefined.com', 'https://django-ecommerce-production-9915.up.railway.app']
 
 
 # Application definition
