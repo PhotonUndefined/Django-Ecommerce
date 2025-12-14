@@ -40,7 +40,7 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
 }
 
-ALLOWED_HOSTS = ['https://photonundefined.com', 'photonundefined.com', 'django-ecommerce-production-9915.up.railway.app']
+ALLOWED_HOSTS = ['https://photonundefined.com', 'photonundefined.com', 'django-ecommerce-production-9915.up.railway.app', '127.0.0.1', 'localhost']
 CSRF_TRUSTED_ORIGINS = ['https://photonundefined.com', 'https://django-ecommerce-production-9915.up.railway.app']
 
 
@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'cloudinary_storage',
     'whitenoise.runserver_nostatic',
+    'paypal.standard.ipn',
     # Custom apps
     'store',
     'cart',
@@ -170,3 +171,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# PayPal settings
+PAYPAL_TEST = True # Use sandbox for testing
+PAYPAL_RECEIVER_EMAIL = 'business@photonundefined.com'
